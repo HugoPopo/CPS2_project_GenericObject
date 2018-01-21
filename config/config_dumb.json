@@ -1,0 +1,94 @@
+{
+    "building": {
+        "label": "Building",
+        "description": "The building where the object is located",
+        "type": "String",
+        "value": "building"
+    },
+    "floor": {
+        "label": "Floor",
+        "description": "The floor where the object is located",
+        "type": "String",
+        "value": "floor"
+    },
+    "room": {
+        "label": "Room",
+        "description": "The room where the object is located",
+        "type": "String",
+        "value": "room"
+    },
+    "object_type": {
+        "label": "Object type",
+        "description": "The type of the object",
+        "type": "String",
+        "value": "dumb"
+    },
+    "object_name": {
+        "label": "Object name",
+        "description": "The name of the object",
+        "type": "String",
+        "value": "dumb sensor 1"
+    },
+    "config": {
+        "label": "Configuration",
+        "description": "The set of parameters which define the object behaviour",
+        "type": "JSON",
+        "values": {
+            "publishing_mode": {
+                "label": "Publishing mode",
+                "description": "The way the object publishes its data",
+                "type": "String",
+                "possible_values": ["continuous", "on-demand"],
+                "value": "continuous"
+            },
+            "publishing_period": {
+                "label": "Publishing period",
+                "description": "The duration in milliseconds between two batches of data in continuous mode",
+                "type": "Integer",
+                "possible_values": "positive",
+                "value": 2
+            },
+            "response_latency": {
+                "label": "Response latency",
+                "description": "The delay in milliseconds between the reception of a request and the sending of the answer",
+                "type": "Integer",
+                "possible_values": "positive",
+                "value": 0
+            },
+            "mqtt broker": {
+                "label": "MQTT configuration",
+                "description": "The parameters needed for the client to connect to the broker",
+                "type": "JSON",
+                "values": {
+                    "connection string" : {
+                        "label": "Conection string",
+                        "description": "The string to connect to the broker with pi user",
+                        "type": "String",
+                        "possible_values": "",
+                        "value": "pi@localhost:1883"
+                    }
+                }
+            },
+            "input pin" : {
+                "label": "Input pin",
+                "description": "The pin the voltage is measured from",
+                "type": "Integer",
+                "possible_values": "1-40",
+                "value": 22
+            },
+            "output pin" : {
+                "label": "Output pin",
+                "description": "The pin of the initial voltage",
+                "type": "Integer",
+                "possible_values": "1-40",
+                "value": 17
+            }
+        }
+    },
+    "fields": {
+        "label": "Fields",
+        "description": "A set of fields such as metrics that the object can collect or a status, etc.",
+        "type": "JSON",
+        "values": {}
+    }
+}
