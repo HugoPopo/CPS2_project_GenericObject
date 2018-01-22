@@ -15,8 +15,11 @@ for file in glob(config_path+"/*.json"):
     print(file)
     description = json.loads(open(file).read())
     print(description["object_type"]["value"])
-    # create object with description with the factory
-    sensors[description["object_name"]["value"]] = factory.createDatasource(description)
+    # create object with description in the factory
+    sensor = factory.createDatasource(description)
+    sensors[description["object_name"]["value"]] = sensor
+    #TODO run the loop in a thread
+    sensor.loop_forever()
     
     
 

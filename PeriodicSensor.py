@@ -5,10 +5,10 @@ class PeriodicSensor(Datasource):
     
     def __init__(self, description):
         super().__init__(description)
-        self.publishingPeriod = description["config"]["values"]["publishing_period"]["value"]
         
     def publishMeasure(self):
-        measure = self.getMeasure()
-        print(self.topic," ",measure)
-        #TODO mqtt publish
-        time.sleep(self.publishingInterval+self.latency)
+        for field_name in self.get_fields_list():
+            self.set_field_value(field_name, self.getMeasure())
+            self.mqtt_client.publish(self.base_topic + "/metrics/" + field_name,
+                                     self.get_field_value(field_name))
+        time.sleep(float(self.get_parameter_value("publishing_period")) / 1000)

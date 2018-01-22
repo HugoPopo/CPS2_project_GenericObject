@@ -9,7 +9,7 @@
         "label": "Floor",
         "description": "The floor where the object is located",
         "type": "String",
-        "value": "floor_9"
+        "value": "floor"
     },
     "room": {
         "label": "Room",
@@ -27,7 +27,7 @@
         "label": "Object name",
         "description": "The name of the object",
         "type": "String",
-        "value": "dumb_sensor_1"
+        "value": "dumb_sensor_2"
     },
     "config": {
         "label": "Configuration",
