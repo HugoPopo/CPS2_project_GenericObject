@@ -21,13 +21,13 @@
         "label": "Object type",
         "description": "The type of the object",
         "type": "String",
-        "value": "dumb"
+        "value": "Adafruit temperature sensor"
     },
     "object_name": {
         "label": "Object name",
         "description": "The name of the object",
         "type": "String",
-        "value": "dumb_sensor_2"
+        "value": "adafruit_temp_1"
     },
     "config": {
         "label": "Configuration",
@@ -110,13 +110,6 @@
         "label": "Fields",
         "description": "A set of fields such as metrics that the object can collect or a status, etc.",
         "type": "JSON",
-        "values": {
-            "dumb_measure": {
-                "label": "Dumb measure",
-                "description": "Measure just for testing",
-                "type": "String",
-                "source": "function"
-            }
-        }
+        "values": { }
     }
 }

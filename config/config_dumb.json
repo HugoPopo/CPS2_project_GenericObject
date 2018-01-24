@@ -65,7 +65,7 @@
                         "description": "The string to connect to the broker",
                         "type": "String",
                         "possible_values": "URL-IP",
-                        "value": "192.168.0.10"
+                        "value": "192.168.43.66"
                     },
                     "host_port": {
                         "label": "Host port",

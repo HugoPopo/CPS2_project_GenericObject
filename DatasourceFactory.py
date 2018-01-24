@@ -1,7 +1,7 @@
 from Datasource import Datasource
 from LightSensor import LightSensor
 from RemoteDatasource import RemoteDatasource
-#from AdafruitSensor import AdafruitSensor
+from AdafruitSensor import AdafruitSensor
 from DumbSensor import DumbSensor
 
 class DatasourceFactory(object):
@@ -10,8 +10,8 @@ class DatasourceFactory(object):
         "light sensor": LightSensor,
         #"motion sensor": MotionSensor,
         "remote": RemoteDatasource,
-        "dumb": DumbSensor
-        #"adafruit": AdafruitSensor
+        "dumb": DumbSensor,
+        "Adafruit temperature sensor": AdafruitSensor
     }
     
     def __init__(self):

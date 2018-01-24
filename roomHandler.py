@@ -3,6 +3,7 @@ import sys
 import json
 from glob import glob
 from DatasourceFactory import DatasourceFactory
+from threading import Thread
 
 config_path = "config"
 if len(sys.argv) > 1:
@@ -20,7 +21,6 @@ for file in glob(config_path+"/*.json"):
     sensors[description["object_name"]["value"]] = sensor
     #TODO run the loop in a thread
     sensor.loop_forever()
-    
     
 
 #~ description = {}
